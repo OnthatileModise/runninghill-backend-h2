@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: runninghill-backend-h2
+    env: java
+    plan: free
+    buildCommand: ./mvnw clean package
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
